@@ -27,8 +27,9 @@ function App() {
                     break;
             }
             if (command >= 0) {
-                gameLogic.command(command);
-                setCount((c: number) => c + 1);
+                if (gameLogic.command(command)) {
+                    setCount((c: number) => c + 1);
+                }
             }
         });
     }, []);

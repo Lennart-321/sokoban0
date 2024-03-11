@@ -32,7 +32,7 @@ export class GameLogic {
         this.state[nxp1] |= 1;
         this.state[mp] &= ~1;
 
-        return false;
+        return true;
     }
 
     pos(row: number, col: number): number {
